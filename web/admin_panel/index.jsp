@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 16-Aug-2015, 20:28:42
-    Author     : Michal Goly
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="/header.jsp" />

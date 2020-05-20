@@ -13,11 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Controls the restricted, admin area of the website.
- * 
- * @author Michal Goly
- */
+
 @WebServlet(name = "AdminServlet", urlPatterns = {"/admin/*"})
 public class AdminServlet extends HttpServlet {
 
@@ -93,7 +89,7 @@ public class AdminServlet extends HttpServlet {
    private String processInvoice(HttpServletRequest request, 
            HttpServletResponse response) {
       
-      // retrieve an appropriate invoice and make it processed
+      // retrieve an appropriate invoice 
       Long invoiceNumber = Long.parseLong(request.getParameter("invoiceNumber"));
       Invoice invoice = InvoiceDB.select(invoiceNumber);
       invoice.setProcessed(true);

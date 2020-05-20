@@ -1,8 +1,4 @@
-<%-- 
-    Document   : error_404
-    Created on : 07-Aug-2015, 15:50:58
-    Author     : michal
---%>
+
 
 <jsp:include page="/header.jsp" />
 

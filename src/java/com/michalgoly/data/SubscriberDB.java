@@ -5,19 +5,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
-/**
- * This class manipulates subscriber objects in the database.
- *
- * @author Michal Goly
- */
+
 public class SubscriberDB {
 
-   /**
-    * Retrieves a single subscriber from the database using provided email address.
-    *
-    * @param email The email address of a subscriber
-    * @return Either appropriate Subscriber object, or null if he doesn't exist
-    */
+   
    public static Subscriber selectByEmail(String email) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT s FROM Subscriber s "
@@ -37,9 +28,7 @@ public class SubscriberDB {
       return subscriber;
    }
 
-   /**
-    * @param subscriber The subscriber to be inserted into a database
-    */
+   
    public static void insert(Subscriber subscriber) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -56,9 +45,7 @@ public class SubscriberDB {
       }
    }
 
-   /**
-    * @param subscriber The subscriber to be updated
-    */
+  
    public static void update(Subscriber subscriber) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -75,12 +62,7 @@ public class SubscriberDB {
       }
    }
 
-   /**
-    * Checks if subscriber with specified email exists within the database
-    *
-    * @param email The email address to be checked
-    * @return True if a subscriber with given email exists, false otherwise
-    */
+   
    public static boolean emailExists(String email) {
       return selectByEmail(email) != null;
    }

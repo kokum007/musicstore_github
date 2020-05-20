@@ -11,13 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- * This class can be used to store information about a download in the web store.
- * For example if a customer wants to listen to a given album, this fact will
- * be recorded in the database as a Download object. 
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class Download implements Serializable {
 

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 05-Aug-2015, 15:06:14
-    Author     : Michal Goly
---%>
+
 
 <jsp:include page="/header.jsp" />
 
@@ -17,7 +13,7 @@
          hope you like it as much as we do.</p>
 
       <p>If you find an album that you like, we hope that you'll use this site 
-         to order it. Most of the albums we carry aren't available anywhere else!</p>
+         to order it. You cant find this anywhere else!</p>
    </div>
 </div>
 

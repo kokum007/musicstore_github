@@ -1,8 +1,4 @@
-<%-- 
-    Document   : invoice
-    Created on : 13-Aug-2015, 13:16:01
-    Author     : Michal Goly
---%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 

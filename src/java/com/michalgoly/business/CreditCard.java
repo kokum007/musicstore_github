@@ -7,12 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * This Entity represents a credit card which has its type (Visa, MasterCard), 
- * a number and an expiration date. 
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class CreditCard implements Serializable {
    

@@ -7,17 +7,10 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-/**
- * This class can manipulate information about products in the database.
- * 
- * @author Michal Goly
- */
+
 public class ProductDB {
    
-   /**
-    * Inserts a new product to the database
-    * @param product The product to be added
-    */
+   
    public static void insert(Product product) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -34,9 +27,7 @@ public class ProductDB {
       }
    }
    
-   /**
-    * @return The list of all products in the database, or null if there are none
-    */
+   
    public static List<Product> selectProducts() {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT p FROM Product p";
@@ -55,12 +46,7 @@ public class ProductDB {
       return products;
    }
    
-   /**
-    * Retrieves a single product from the database, based on the provided
-    * product code. 
-    * @param productCode The code of the product to be retrieved
-    * @return The selected product if exists, null otherwise
-    */
+   
    public static Product selectProduct(String productCode) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT p FROM Product p "
@@ -80,9 +66,7 @@ public class ProductDB {
       return product;
    }
    
-   /**
-    * @return Either the newest product, or null it if does not exist
-    */
+   
    public static Product selectNewestProduct() {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT p FROM Product p "

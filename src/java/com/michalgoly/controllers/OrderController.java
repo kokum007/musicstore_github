@@ -25,10 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Michal Goly
- */
+
 @WebServlet(name = "OrderController", urlPatterns = {"/order/*"})
 public class OrderController extends HttpServlet {
 
@@ -89,14 +86,14 @@ public class OrderController extends HttpServlet {
    }
 
    private String addItem(HttpServletRequest request, HttpServletResponse response) {
-      // retrieve or create a cart
+      
       HttpSession session = request.getSession();
       Cart cart = (Cart) session.getAttribute("cart");
       if (cart == null) {
          cart = new Cart();
       }
 
-      // get the product from the database, create a line item and put it into the cart
+      
       String productCode = request.getParameter("productCode");
       Product product = ProductDB.selectProduct(productCode);
       if (product != null) {
@@ -191,7 +188,7 @@ public class OrderController extends HttpServlet {
    private String processCustomer(HttpServletRequest request,
            HttpServletResponse response) {
 
-      // retrieve data entered by the customer
+      
       String firstName = request.getParameter("firstName");
       String lastName = request.getParameter("lastName");
       String email = request.getParameter("email");
@@ -229,10 +226,7 @@ public class OrderController extends HttpServlet {
       return url;
    }
 
-   /* 
-    * Validates data entered by user into a form
-    * @return true if input is valid, false otherwise
-    */
+  
    private boolean isValid(String firstName, String lastName, String email,
            String companyName, String address1, String address2, String city,
            String county, String postCode, String country) {
@@ -258,10 +252,7 @@ public class OrderController extends HttpServlet {
       return valid;
    }
 
-   /*
-    * Retrieves a customer object from the http session or creates a new one if
-    * it does not exist. Afterwards, it fills it with the provided data. 
-    */
+   
    private Customer createCustomer(HttpSession session, String firstName,
            String lastName, String email, String companyName, String address1,
            String address2, String city, String county, String postCode,
@@ -307,7 +298,7 @@ public class OrderController extends HttpServlet {
    }
 
    private String complete(HttpServletRequest request, HttpServletResponse response) {
-      // retrieve parametres from the payment form
+     
       String cardType = request.getParameter("cardType");
       String cardNumber = request.getParameter("cardNumber");
       String expirationMonth = request.getParameter("expirationMonth");
@@ -329,7 +320,7 @@ public class OrderController extends HttpServlet {
          CustomerDB.insert(customer);
       }
 
-      // insert an invoice to the database and remove all items from user's cart
+      
       InvoiceDB.insert(invoice);
       session.setAttribute("cart", null);
       

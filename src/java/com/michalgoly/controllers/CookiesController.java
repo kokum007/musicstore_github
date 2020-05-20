@@ -8,11 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Enables the user to delete persistent cookies stored in his browser.
- * 
- * @author Michal Goly
- */
+
 @WebServlet(name = "CookiesController", urlPatterns = {"/cookies/*"})
 public class CookiesController extends HttpServlet {
 

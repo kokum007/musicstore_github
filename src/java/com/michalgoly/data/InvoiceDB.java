@@ -6,18 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-/**
- * This class can manipulate Invoice objects in the database
- *
- * @author Michal Goly
- */
+
 public class InvoiceDB {
 
-   /**
-    * Inserts a new invoice to the database
-    *
-    * @param invoice The invoice to be added
-    */
+   
    public static void insert(Invoice invoice) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -34,11 +26,7 @@ public class InvoiceDB {
       }
    }
 
-   /**
-    * Updates the invoice object in the database
-    *
-    * @param invoice The object to be updated
-    */
+   
    public static void update(Invoice invoice) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -55,9 +43,7 @@ public class InvoiceDB {
       }
    }
 
-   /**
-    * @return A list of all Invoices in the db, null if there are none
-    */
+   
    public static List<Invoice> selectInvoices() {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT i FROM Invoice i";
@@ -76,12 +62,7 @@ public class InvoiceDB {
       return invoices;
    }
 
-   /**
-    * Selects a single Invoice object from the database based on its primary key.
-    *
-    * @param invoiceNumber The primary key, number of the invoice
-    * @return Either the Invoice with specified PK, or null if it does not exist
-    */
+   
    public static Invoice select(Long invoiceNumber) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       Invoice invoice = null;

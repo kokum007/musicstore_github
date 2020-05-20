@@ -6,11 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * This entity represents the email newsletter subscriber. 
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class Subscriber implements Serializable {
    

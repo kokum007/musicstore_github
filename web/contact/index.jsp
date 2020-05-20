@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 15-Aug-2015, 12:21:08
-    Author     : Michal Goly
---%>
+
 <jsp:include page="/header.jsp" />
 
 <div class="container">
@@ -26,7 +22,7 @@
                <p><strong>Phone:</strong></p>
             </div>
             <div class="col-xs-10">
-               <p>+44 7656 666226</p>
+               <p>+94 0112345678</p>
             </div>
          </div>
          <div class="row">

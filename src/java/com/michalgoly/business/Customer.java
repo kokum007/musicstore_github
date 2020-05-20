@@ -8,12 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-/**
- * This entity represents a single customer in the store. Each customer has
- * its name, email address and a credit card. 
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class Customer implements Serializable {
 

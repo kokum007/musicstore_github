@@ -16,12 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- * This class represents an invoice which is generated when a customer makes
- * a purchase in the store.
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class Invoice implements Serializable {
    

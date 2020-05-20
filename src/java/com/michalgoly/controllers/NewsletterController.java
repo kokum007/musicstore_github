@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Michal Goly
- */
+
 @WebServlet(name = "NewsletterController", urlPatterns = {"/newsletter/*"})
 public class NewsletterController extends HttpServlet {
 
@@ -39,7 +36,7 @@ public class NewsletterController extends HttpServlet {
    }
 
    private String subscribe(HttpServletRequest request, HttpServletResponse response) {
-      // retrieve parameters entered into the form
+      
       String firstName = request.getParameter("firstName");
       String lastName = request.getParameter("lastName");
       String email = request.getParameter("email");

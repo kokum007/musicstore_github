@@ -6,11 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * This Entity represents customer's address.
- *
- * @author Michal Goly
- */
+
 @Entity
 public class Address implements Serializable {
 

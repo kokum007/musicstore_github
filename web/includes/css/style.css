@@ -1,7 +1,3 @@
-/* 
-    Created on : 05-Aug-2015, 18:24:29
-    Author     : Michal Goly
-*/
 
 .navbar {
    margin-bottom: 0;
@@ -20,7 +16,7 @@ footer p a {
    text-decoration: underline;
 }
 
-/* Sticky footer code */
+
 html {
    position: relative;
    min-height: 100%;
@@ -34,10 +30,10 @@ footer {
    position: absolute;
    bottom: 0;
    width: 100%;
-   /* Footer fixed height */
+   /* Footer height */
    height: 165px;
 }
-/* End of sticky footer code */
+
 
 @media(max-width:991px) {
    footer {

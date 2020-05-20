@@ -1,8 +1,4 @@
-<%-- 
-    Document   : new_customer
-    Created on : 11-Aug-2015, 18:16:52
-    Author     : Michal Goly
---%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="goly" uri="/WEB-INF/customTags.tld" %>
 

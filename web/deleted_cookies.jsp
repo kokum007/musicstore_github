@@ -1,8 +1,4 @@
-<%-- 
-    Document   : deleted_cookies
-    Created on : 16-Aug-2015, 14:47:53
-    Author     : Michal Goly
---%>
+
 
 <jsp:include page="/header.jsp" />
 

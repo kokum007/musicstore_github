@@ -12,12 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * This Entity represents a single product in the store, which have its code,
- * a description and a price, as well as album information and its titles.
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class Product implements Serializable {
    
@@ -82,10 +77,7 @@ public class Product implements Serializable {
       return csAlbumTitles;
    }
    
-   /**
-    * @return A list of titles for this albums, from the comma-separated 
-    * csAlbumTitles
-    */
+   
    public List<String> getTitlesList() {
       String[] tokens = csAlbumTitles.split(",");
       return Arrays.asList(tokens);

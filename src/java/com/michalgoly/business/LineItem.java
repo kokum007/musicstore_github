@@ -9,11 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-/**
- * This entity represents a collection of products with a specified quantity.
- * 
- * @author Michal Goly
- */
+
 @Entity
 public class LineItem implements Serializable {
    

@@ -6,18 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-/**
- * This class can manipulate Download objects in the database
- *
- * @author Michal Goly
- */
+
 public class DownloadDB {
 
-   /**
-    * Inserts a Download object into the database
-    *
-    * @param download The download to be inserted
-    */
+ 
    public static void insert(Download download) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -34,9 +26,8 @@ public class DownloadDB {
       }
    }
 
-   /**
-    * @return The list of downloads in the database, null if none exist
-    */
+   
+   
    public static List<Download> selectDownloads() {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT d FROM Download d";

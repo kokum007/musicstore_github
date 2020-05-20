@@ -1,8 +1,4 @@
-<%-- 
-    Document   : downloads
-    Created on : 16-Aug-2015, 21:58:57
-    Author     : Michal Goly
---%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 

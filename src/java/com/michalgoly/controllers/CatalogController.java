@@ -19,10 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Michal Goly
- */
+
 @WebServlet(name = "CatalogController", urlPatterns = {"/catalog", "/catalog/product/*"})
 public class CatalogController extends HttpServlet {
 
@@ -59,10 +56,7 @@ public class CatalogController extends HttpServlet {
       getServletContext().getRequestDispatcher(url).forward(request, response);
    }
 
-   /*
-    * Retrieves products list from the database, sets in as a session attribute
-    * and prepares an appropriate url. 
-    */
+   
    private String displayProducts(HttpServletRequest request,
            HttpServletResponse response) {
 
@@ -81,7 +75,7 @@ public class CatalogController extends HttpServlet {
       String[] tokens = requestURI.split("/");
       String productCode = tokens[tokens.length - 1];
 
-      // Retrieve the product from the database and set it as a session attribute
+      // Retrieve the product from the database
       Product product = ProductDB.selectProduct(productCode);
       HttpSession session = request.getSession();
       session.setAttribute("product", product);
@@ -104,14 +98,14 @@ public class CatalogController extends HttpServlet {
             customer = CustomerDB.selectByEmail(email);
          }
 
-         // if customer with given email does not exist, redirect to registration
+         // email does not exist, redirect to registration
          if (customer == null) {
             return "/catalog/register.jsp";
          }
          session.setAttribute("customer", customer);
       }
 
-      // keep track of downloads by the customers
+      // downloads by the customers
       Product product = (Product) session.getAttribute("product");
       Download download = new Download();
       download.setCustomer(customer);
@@ -165,10 +159,7 @@ public class CatalogController extends HttpServlet {
       return "/catalog/listen.jsp";
    }
 
-   /* 
-    * Validates data entered by user into a form
-    * @return true if input is valid, false otherwise
-    */
+   
    private boolean isValid(String firstName, String lastName, String email) {
       boolean valid = true;
 

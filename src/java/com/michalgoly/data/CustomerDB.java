@@ -5,19 +5,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
-/**
- * This class can manipulate customer objects in the database
- *
- * @author Michal Goly
- */
+
 public class CustomerDB {
 
-   /**
-    * Retrieves a single customer from the database using provided email address.
-    *
-    * @param email The email address of a customer
-    * @return Either appropriate Customer object, or null if he doesn't exist
-    */
+   
    public static Customer selectByEmail(String email) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       String queryString = "SELECT c FROM Customer c "
@@ -37,9 +28,7 @@ public class CustomerDB {
       return customer;
    }
 
-   /**
-    * @param customer The customer to be inserted into a database
-    */
+   
    public static void insert(Customer customer) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -56,9 +45,7 @@ public class CustomerDB {
       }
    }
    
-   /**
-    * @param customer The customer to be updated
-    */
+   
    public static void update(Customer customer) {
       EntityManager em = DBUtil.getEmFactory().createEntityManager();
       EntityTransaction transaction = em.getTransaction();
@@ -75,12 +62,7 @@ public class CustomerDB {
       }
    }
    
-   /**
-    * Checks if customer with specified email exists within the database
-    * 
-    * @param email The email address to be checked
-    * @return True if a customer with given email exists, false otherwise
-    */
+  
    public static boolean emailExists(String email) {
       return selectByEmail(email) != null;
    }

@@ -115,12 +115,11 @@ Away,Kern County Waltz,Distance,Sunshine on the Trees', 'Paddlefoot - The
 second CD', 11.949999999999999289457264239899814128875732421875);
 
 INSERT INTO PRODUCT (PRODUCTID, ALBUMINFORMATION, CODE, CSALBUMTITLES,
-DESCRIPTION, PRICE) VALUES (4, 'The debut album from Joe Rut rambles from
-Byrds-esque folk pop of "Filter" to the country sounds of "Find My Way Marie"
+DESCRIPTION, PRICE) VALUES (4, 'The debut album from Maroon 5 from
+ folk pop of "Filter" to the country sounds of "Find My Way Marie"
 to psychedelic Brit-pop tunes like "A Place In All This." This well-crafted
 album is unique and cohesive, revealing its many layers on repeated listens.',
 'jr01', 'Find My Way Marie,Filter,Hole,1400 Years,A Tuna Is a Damn Big Fish,So
 Long Lazy Ray,El Dorado,Dream of You,This Sea Is Full of Monsters,A Place in
-All This,GTTSWMD,AM Land,Whole Month of Sundays,Penny From a Poor Man', 'Joe
-Rut - Genuine Wood Grained Finish', 14.5);
+All This,GTTSWMD,AM Land,Whole Month of Sundays,Penny From a Poor Man', 'Maroon 5 - The Best', 14.5);
 

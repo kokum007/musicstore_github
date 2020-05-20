@@ -1,8 +1,4 @@
-<%-- 
-    Document   : header.jsp
-    Created on : 05-Aug-2015, 15:53:22
-    Author     : Michal Goly
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -11,7 +7,7 @@
    <head>
       <title>Music Store</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="author" content="Michal Goly" />
+      <meta name="author" content="NSBM" />
 
       <!-- jQuery -->
       <script src="<c:url value='/includes/js/jquery-2.1.4.min.js' />"></script>
@@ -25,7 +21,7 @@
       <!-- Font awesome -->
       <link href="<c:url value='/includes/css/font-awesome.min.css' />" rel="stylesheet" />
       
-      <!-- jQuery script which makes appropriate navbar tab active -->
+      
       <script>
          var j$ = jQuery.noConflict();
          j$(document).ready(function() {
